@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>United Nation's 12th Goal</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="images/GlobalLogo.png">
+    </head>
+    <body>
+        <!--Header-->
+        <section>
+            <div class="profile-wrapper-container">
+            <header>
+                <nav class="nav-bar">
+                    <div class="logo">
+                        <a href="home.html"><img src="images/GlobalLogo.png" alt="Global Harmony logo" class="logo-pic"></a>
+                        <span class="logo-text"><a href="home.html">GLOBAL HARMONY</a></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="home.html" class="nav-item">HOME</a></li>
+                        <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                        <li><a href="team.html" class="nav-item">TEAM</a></li>
+                        <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+                        <li id="user"><a href="profile.html"><i class="far fa-user user" id="user-tag"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Content for cover page -->
+
+            <h1 class="team-title">User Profile</h1>
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <label for="prompt1">User Information</label>
+                    <textarea id="prompt1" class="input-box" placeholder="Prompt 1" readonly></textarea>
+                    <div class="question-form" id="form1">
+                        <div class="question-item" id="question-username">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form1', 'username')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-password">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form1', 'password')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-confirmation">
+                            <label for="cardowner">Password confirmation:</label>
+                            <input type="password" id="confirmation" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form1', 'confirmation')">Skip</button>
+                        </div>
+                        <button type="button" class="submit-btn" onclick="moveToNextPrompt('form1', 'prompt1', 'form2')">Move to Prompt 2</button>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="prompt2">Basic Information:</label>
+                    <textarea id="prompt2" class="input-box" placeholder="Prompt 2" readonly></textarea>
+                    <div class="question-form" id="form2">
+                        <div class="question-item" id="question-fullname">
+                            <label for="fullname">Full name:</label>
+                            <input type="text" id="fullname" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form2', 'fullname')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-fullname">
+                            <label for="halfname">Name with initials:</label>
+                            <input type="text" id="halfname" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form2', 'halfname')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-address">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form2', 'address')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-phone">
+                            <label for="phone">Contact number:</label>
+                            <input type="tel" id="phone" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form2', 'phone')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-email">
+                            <label for="email">Email address:</label>
+                            <input type="email" id="email" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form2', 'email')">Skip</button>
+                        </div>
+                        <div>
+                        <button type="button" class="nav-btn" onclick="moveToPreviousPrompt('form2', 'form1')">Previous</button>
+                        <button type="button" class="submit-btn" onclick="moveToNextPrompt('form2', 'prompt2', 'form3')">Move to Prompt 3</button>
+                        </div>    
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="prompt3">Other Information:</label>
+                    <textarea id="prompt3" class="input-box" placeholder="Prompt 3" readonly></textarea>
+                    <div class="question-form" id="form3">
+                        <div class="question-item" id="question-getinfo">
+                            <label for="getinfo">The way you know about this shop:</label>
+                            <select id="getinfo" name="getinfo">
+                                <option value="option1">Social media</option>
+                                <option value="option2">Relation</option>
+                                <option value="option3">Friend</option>
+                                <option value="option4">Other</option> 
+                            </select>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form3', 'getinfo')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-job">
+                            <label for="job">Occupation:</label>
+                            <input type="text" id="job" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form3', 'job')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-workplace">
+                            <label for="workplace">Workplace address::</label>
+                            <input type="text" id="workplace" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form3', 'workplace')">Skip</button>
+                        </div>
+                        <div class="question-item" id="question-workplace-number">
+                            <label for="workplace-number">Workplace phone number:</label>
+                            <input type="tel" id="workplace-number" required>
+                            <button type="button" class="skip-btn" onclick="skipQuestion('form3', 'workplace-number')">Skip</button>
+                        </div>
+                        <div>
+                            <button type="button" class="nav-btn" onclick="moveToPreviousPrompt('form3', 'form2')">Previous</button>
+                            <button type="button" class="submit-btn" onclick="checkAllPromptsFilled(); fillProgressBar()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            </div>
+        </section>
+        <!--Main Content(If you use any sections after the cover page)-->
+        <!--Footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="page-editor-content">
+                    <span class="footer-title">Page Editors</span>
+                    <ul>
+                        <li><a href="pageEditor1.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 01</a></li>
+                        <li><a href="pageEditor2.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 02</a></li>
+                        <li><a href="pageEditor3.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 03</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <span class="footer-title">Contact Us</span>
+                    <li><a href="" class="email"><i class="fas fa-envelope footer-icon"></i>example@gmail.com</a></li>
+                    <li><i class="fas fa-phone footer-icon"></i>077 1234567</li>
+                </div>
+            </div>
+            <div class="footer-copyright">Copyright &#169; All rights Reserved</div>
+            
+        </footer>
+        <script src="template.js"></script>
+    </body>
+</html>

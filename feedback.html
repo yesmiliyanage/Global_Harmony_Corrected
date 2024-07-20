@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Harmony</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="images/GlobalLogo.png">
+
+        <!-- Emailjs -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script>
+            (function(){emailjs.init({
+            publicKey: "goNH1e-3liOr5B5XY",
+            });
+            })();
+        </script>
+
+    </head>
+    <body>
+        
+            <!--Header-->
+
+        <section>
+            <div class="feedback-page" id="feedback-page">
+            <header>
+                <nav class="nav-bar">
+                    <div class="logo">
+                        <a href="home.html"><img src="images/GlobalLogo.png" alt="Global Harmony logo" class="logo-pic"></a>
+                        <span class="logo-text"><a href="home.html">GLOBAL HARMONY</a></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="home.html" class="nav-item">HOME</a></li>
+                        <li><a href="shop.html" class="nav-item">SHOP</a></li>
+                        <li><a href="team.html" class="nav-item">TEAM</a></li>
+                        <li><a href="feedback.html" class="nav-item">FEEDBACK</a></li>
+                        <li id="user"><a href="profile.html"><i class="far fa-user user" id="user-tag"></i></a></li>
+                        
+                    </ul>
+                    
+                </nav>
+            </header>
+
+
+            <div class="feedback-form-container" id="feedback-form-container">
+                <div class="feedback-title">
+                    <div class="feedback-maintitle"><h1 id="feedback-maintitle">FEEDBACK</h1></div>
+                    <div class="feedback-subtitle"><h3 id="feedback-subtitle">Give Us Your Feedback...</h3></div>
+                </div>
+
+                <form  class="feedback-form" id="feedback-form">
+                    <div class="personal-info">
+                        <div class="personal-section1">
+
+                            <div class="feedback-name feedback-preview">
+                                <label for="feedback-name">Full Name <span class="required-star">*</span></label>
+                                <input type="text" id="feedback-name" placeholder="Enter your name" spellcheck="false" name="feedbackName">
+                                <!-- <div>This field is required</div> -->
+                                <small class="feedback-small" id="feedback-name-required">This field is required</small>
+                            </div>
+
+                            <div class="feedback-email feedback-preview">
+                                <label for="feedback-email">Email <span class="required-star">*</span></label>
+                                <input type="email" id="feedback-email" placeholder="john@gmail.com" spellcheck="false" name="feedbackEmail">
+                                <small class="feedback-small" id="feedback-email-required">This field is required</small>
+                            </div>
+            
+                        </div>
+
+                        <div class="personal-section2">
+
+                            <div class="feedback-phone-number feedback-preview">
+                                <label for="feedback-phone-number">Phone Number <span class="required-star">*</span></label>
+                                <input type="tel" id="feedback-phone-number" placeholder="xxx-xxx-xxxx" name="feedbackPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" minlength="12">
+                                <small class="feedback-small" id="feedback-phone-required">This field is required</small>
+                            </div>
+                            
+                            <div class="feedback-address feedback-preview">
+                                <label for="feedback-address">Address <span class="required-star">*</span></label>
+                                <input type="text" id="feedback-address" spellcheck="false" name="feedbackAddress">
+                                <small class="feedback-small" id="feedback-address-required">This field is required</small>
+                            </div>
+                            
+                        </div>
+                        
+
+                        
+                    </div>
+
+                    <div class="feedback-section1">
+                        <div class="feedback-section1-q1 feedback-preview" id="feedback-section1-q1">
+                            <div>
+                                <label>Is this your first time visiting this website <span class="required-star">*</span></label> 
+                            </div>
+                            
+                            <div class="feedback-section1-radio">
+                                <input type="radio" id="feedback-section1-q1-yes" name="feedbackSection1Q1" value="yes">
+                                <label for="feedback-section1-q1-yes">Yes</label>
+                            </div>
+
+                            <div class="feedback-section1-radio">
+                                <input type="radio" id="feedback-section1-q1-no" name="feedbackSection1Q1" value="no">
+                                <label for="feedback-section1-q1-no">No</label>
+                            </div>
+                        </div>
+
+                        <div class="feedback-small-section1" id="feedback-radio1-required">
+                            <small>This field is required</small>
+                        </div>
+
+                        <div class="feedback-section1-q2 feedback-preview">
+                            <label for="feedback-section1-q2">How did you find this website <span class="required-star">*</span></label>
+                            <select id="feedback-section1-q2" name="feedbackSection1Q2" class="feedback-recommend" >
+                                <option value="Via Google">Via Google</option>
+                                <option value="Via Social Media">Via Social Media</option>
+                                <option value="via an Advertisement">via an Advertisement</option>
+                                <option value="Recommended By Someone">Recommended By Someone</option>
+                            </select>
+                        </div>
+
+                        <div  class="feedback-small-section1" id="feedback-section1-q2-required">
+                            <small>This field is required</small>
+                        </div> 
+
+                        <div class="feedback-section1-q3">
+                            <label>Would you recommend this website to somenone <span class="required-star">*</span></label>
+                            <div class="feedback-section1-radio">
+                                <input type="radio" id="feedback-section1-q3-yes" name="feedbackSection1Q3" value="yes">
+                                <label for="feedback-section1-q3-yes">Yes</label>
+                                
+                            </div>
+                            
+                            <div class="feedback-section1-radio">
+                                <input type="radio" id="feedback-section1-q3-no" name="feedbackSection1Q3" value="no">
+                                <label for="feedback-section1-q3-no">No</label>
+                            </div>
+                            
+                        </div>
+
+                        <div  class="feedback-small-section1" id="feedback-radio2-required">
+                            <small>This field is required</small>
+                        </div>
+
+                        <div class="feedback-section1-q4 feedback-preview">
+                            <label for="feedback-section1-q4-textarea">If no, Please tell us the drawbacks</label>
+                            <textarea name="feedbackSection1Q4" id="feedback-section1-q4-textarea" placeholder="What to be improved..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="feedback-section2 feedback-preview">
+                        <div class="feedback-rating1">
+                            <div class="feedback-section2-question">
+                                <label>Was our website easy to navigate through <span class="required-star">*</span></label>
+                                <small class="feedback-small-section2" id="rating-q1-required">This field is required</small>
+                            </div>
+
+                            <div class="rating-scale">
+                                <div>Extremely Disagree</div>
+                                <div>Extremely Agree</div>
+                            </div>
+                            <div class="feedback-rating-numbers">
+                                <div class="rating-number1" data-value="1">1</div>
+                                <div class="rating-number1" data-value="2">2</div>
+                                <div class="rating-number1" data-value="3">3</div>
+                                <div class="rating-number1" data-value="4">4</div>
+                                <div class="rating-number1" data-value="5">5</div>
+                            </div>
+                            <input type="hidden" id="ease-navigation" name="feedbackEaseNavigation" >
+                        </div>
+
+                        <div class="feedback-rating2">
+                            <div class="feedback-section2-question">
+                                <label>How was the quality of our products <span class="required-star">*</span></label>
+                                <small class="feedback-small-section2" id="rating-q2-required">This field is required</small>
+                            </div>
+
+                            <div class="rating-scale">
+                                <div>Extremely Disagree</div>
+                                <div>Extremely Agree</div>
+                            </div>
+                            <div class="feedback-rating-numbers">
+                                <div class="rating-number2" data-value="1">1</div>
+                                <div class="rating-number2" data-value="2">2</div>
+                                <div class="rating-number2" data-value="3">3</div>
+                                <div class="rating-number2" data-value="4">4</div>
+                                <div class="rating-number2" data-value="5">5</div>
+                            </div>
+                            <input type="hidden" id="product-quality" name="feedbackProductQuality">
+                        </div>
+
+                        <div class="feedback-rating3">
+                            <div class="feedback-section2-question">
+                                <label>How would you rate the overall experience <span class="required-star">*</span></label>
+                                <small class="feedback-small-section2" id="rating-q3-required">This field is required</small>
+                            </div>
+
+                            <div class="rating-scale">
+                                <div>Extremely Disagree</div>
+                                <div>Extremely Agree</div>
+                            </div>
+                            <div class="feedback-rating-numbers">
+                                <div class="rating-number3" data-value="1">1</div>
+                                <div class="rating-number3" data-value="2">2</div>
+                                <div class="rating-number3" data-value="3">3</div>
+                                <div class="rating-number3" data-value="4">4</div>
+                                <div class="rating-number3" data-value="5">5</div>
+                            </div>
+                            <input type="hidden" id="overall-rating" name="feedbackOverallRating">
+                        </div>
+                    </div>
+
+                    <div class="feedback-section3 feedback-preview">
+                        <div class="feedback-section3-question">
+                            <label for="suggestions">Any suggestions for the improvement of our website</label>
+                        </div>
+                        <div>
+                            <textarea id="suggestions" name="feedbackSuggestions" placeholder="Tell us your suggestions..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="feedback-section4 feedback-preview">
+                        <div class="feedback-agreement">
+                            <input type="checkbox" id="feedback-agreement" name="feedbackAgreement">
+                            <label for="feedback-agreement">I agree to receive updates about this website via email</label>
+                        </div>
+                    </div>
+
+                    <div class="feedback-section5">
+                        <button type="button" onclick="previewFeedbackForm()" value="Preview" class="feedback-button" id="feedback-preview-button">Preview</button>
+                    </div>
+
+                    <div class="feedback-section6">
+                        <div>
+                            <button type="button" onclick="editFeedbackForm()" value="Edit" class="feedback-button" id="feedback-edit-button">Edit</button>
+                        </div>
+            
+                        <div>
+                            <button type="button" onclick="submitFeedbackForm()" value="Submit" class="feedback-button" id="feedback-submit-button">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        
+
+            <!-- Modal to be displayed after successful submission -->
+            <div id="feedback-modal-container" class="feedback-modal-container">
+                <div class="modal-content">
+                    <div class="close-icon-container">
+                        <span class="close-icon" id="feedback-close-icon">&times;</span>
+                    </div>
+                    <div class="tick-icon-container">
+                        <div class="tick-icon-div"><i class="far fa-check-circle tick-icon"></i></div>
+                    </div>
+                    <div class="modal-title1">
+                        Submission Successful
+                    </div>
+                    <div class="modal-title2">
+                        Thank You for Your Valuable Time
+                    </div>
+                    <div>
+                        <a href="home.html" class="feedback-to-home">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+        
+        
+
+        <!--Main Content-->
+    
+        <!--Footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="page-editor-content">
+                    <span class="footer-title">Page Editors</span>
+                    <ul>
+                        <li><a href="pageEditor1.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 01</a></li>
+                        <li><a href="pageEditor2.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 02</a></li>
+                        <li><a href="pageEditor3.html" class="page-editor" target="_blank"><i class="fas fa-file footer-icon"></i>Page Editor 03</a></li>
+                    </ul>
+                </div>
+        
+                <div class="contact">
+                    <span class="footer-title">Contact Us</span>
+                    <ul>
+                        <li><a href="" class="footer-email"><i class="fas fa-envelope footer-icon"></i>example@gmail.com</a></li>
+                        <li><i class="fas fa-phone footer-icon"></i>077 1234567</li>
+                    </ul>
+        
+                </div>
+            </div>
+
+            <div class="footer-copyright">Copyright &#169;  All rights Reserved</div>
+        </footer>
+
+
+
+        <!--Javascript-->
+        <script src="interaction.js">
+
+        </script>
+        
+    </body>
+</html>
